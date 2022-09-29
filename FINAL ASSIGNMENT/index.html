@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Head -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>ANDREA ZAMBRANO</title>
+    <link rel="shortcut icon" type="img/jpg" href="media/codingIcon.png">
+    <link rel="stylesheet" type="text/css" href="CSS/main.css">
+</head>
+
+
+<body class="Background">   
+
+    <!-- NAV BAR -->
+    <div class="Navbar">
+        <a class="active" href="#Home">Home</a>
+        <!-- SECTION -->
+        <a href="#Slideshow">Slideshow</a>
+        <a href="#About">About Me</a>
+        <a href="#GitHub">GitHub Link</a>
+        <!-- ONCLICK OPEN CONTACT FORM-->
+        <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
+    </div>
+
+    <!--VIDEO BACKGROUND-->
+    <div id="Home">
+        <video autoplay muted loop id="Typing_Video">
+            <source src="media/typing.mp4" type="video/mp4">
+            <!-- FAIL MESSAGE-->
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <!--TEXT OVER VIDEO -->
+    <div class="Video_Text">
+        <h1 class="white-text">Andrea Zambrano, My portfolio</h1>
+        <strong>
+            <p class="center">
+                <q>Computer programming is the process of performing a particular computation, usually by designing and building an executable computer program.
+                <br> Programming involves tasks such as analysis, generating algorithms, profiling algorithms' accuracy and resource consumption, and the implementation of algorithms.
+                </q>
+                <br>
+                <br>
+                My name is Andrea Zambrano, let me show you some of my experience and background.
+                <br>
+                <br>Thank you for stopping by and enjoy! 
+            </p>
+        </strong>
+    </div>
+
+    <!--SLIDESHOW BOX-->
+    <div id="Slideshow">
+        <div id="Slideshow_Background"> 
+            <div id="Slideshow_Container">
+                <!--SLIDE1/6-->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="media/pphoto.JPG" alt="Picture of yourself">
+                    <div class="text">How can I help you?</div>
+                </div>
+                <!--SLIDE2/6-->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="media/slideshow/languages.png" alt="programming languages"> 
+                    <div class="text">I am a software developer,<br> completely trained in:<br>HTML, CSS, JavaScript,</div>
+                </div>
+                <!-- SLIDE3/6-->
+                    <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="media/slideshow/xml.png" alt="XML">
+                    <div class="text">Learning XML and PHP</div>
+                </div>
+                <!-- SLIDE4/6 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="media/slideshow/FandL.png" alt="libraries and frameworks">
+                    <div class="text"> Able to manage multiple Libraries and Frameworks</div>
+                </div>
+                <!-- SLIDE5/6 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="media/slideshow/datab.png" alt="databases"> 
+                    <div class="text">back end development, databases and SQL.</div>
+                </div>
+                <!-- SLIDE6-->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="media/slideshow/code.png" alt="Replace with a picture of your choosing"> 
+                    <div class="text"><a class="white-text contact" onclick="openForm()">Let's connect!</a></div> 
+                </div>
+                <!-- CONTROL BUTTONS -->
+                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br> <!-- ADD SPACE SLIDE-DOTS -->
+
+            <!-- SLIDESHOW NAVI DOTS -->
+            <div style="text-align: center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(4)"></span> 
+                <span class="dot" onclick="currentSlide(5)"></span> 
+                <span class="dot" onclick="currentSlide(6)"></span> 
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="Row" id="About">
+        <!--COLUMN 1-->
+        <div class="Column_2">
+            <img src="media/developer.png" alt="Developer">
+        </div>
+            <!--COLUMN 2-->
+            <div class="Column_1">
+            <h1>About Me</h1>
+            <p>
+                I am a software developer student, mother of 3 and wife, I work as a marketing manager and study. 
+                <br>
+                <br>I am not a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, but trained and experienced in the following web and programming languages: HTML, CSS, JavaScript and more. 
+                <br>
+                <br>I would love to work with you on your project. <a onclick="openForm()" class="contact">Contact</a> me below!
+            </p>
+        </div>
+    </div>
+
+    <!--CONTACT-->
+    <div class="Row" id="GitHub">
+        <!--COLUMNS-->
+            <div class="Column_1">
+                <h1>GitHub</h1>
+                <p>You can view my coding projects on my GitHub profile here:
+                    <br>
+                    <p class="center"><a href="https://github.com/andreazambranor" target="_blank">Andrea-My Github</a></p>
+                </p>
+            </div>
+            <!--COLUMNS -->
+            <div class="Column_2">
+                <a href="https://github.com/andreazambranor" target="_blank"><img src="media/github.png"></a>
+            </div>
+        </div>
+
+    <!-- Contact form -->
+    <div id="Contact">
+        <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+       <div class="form-popup" id="myForm">
+            <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container"> <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+                <h1>Contact</h1>
+                <label for="name"><b>Name</b></label>
+                  <input type="text" placeholder="Type your name here" name="name" required>
+                <label for="phone"><b>Phone</b></label>
+                  <input type="text" placeholder="Type your phone number here" name="phone">
+                <label for="email"><b>Email</b></label>		
+                  <input type="text" placeholder="Type your email address here" name="email" required>
+                <label for="message"><b>Message</b></label>
+                  <input type="text" placeholder="Type your message here" name="message">
+     
+                <button type="submit" class="btn">SUBMIT</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+            </form>
+        </div>
+    </div>
+        
+    <!-- Footer section -->
+    <footer>
+        <p class="center">&copy Consulting, ANDREA</p><br>
+    </footer>
+
+    <script src="JS/main.js"></script>
+
+
+    </body>
+
+</html
